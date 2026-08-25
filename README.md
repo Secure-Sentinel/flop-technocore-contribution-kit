@@ -1,5 +1,7 @@
 # FLOP Technocore Contribution Kit
 
+Public repository: https://github.com/Secure-Sentinel/flop-technocore-contribution-kit
+
 Yerel çalışan, güvenlik odaklı bir CLI + web sihirbazı: kendi Ed25519
 `did:key` kimliğini oluşturur, Technocore’a imzalı katılım mesajı gönderir,
 public contribution kaydını bırakır ve son Git commit’ine bağlı doğrulanabilir
@@ -30,7 +32,7 @@ Runtime npm bağımlılığı yoktur. `npm install` çalıştırman gerekmez.
 ## En hızlı yol: web sihirbazı
 
 ```bash
-git clone https://github.com/<YOUR_USERNAME>/flop-technocore-contribution-kit.git
+git clone https://github.com/Secure-Sentinel/flop-technocore-contribution-kit.git
 cd flop-technocore-contribution-kit
 npm start
 ```
@@ -138,4 +140,3 @@ Bu repo topluluk yapımı bir araçtır; Flop Labs’in resmi ürünü değildir
 ## Lisans
 
 MIT
-
