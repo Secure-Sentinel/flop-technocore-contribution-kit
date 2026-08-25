@@ -21,8 +21,8 @@ Benzer starter repoların çoğu rehber veya tek seferlik DID aracı olarak
 
 1. Şifrelenmiş identity dosyası yalnızca yerelde tutulur.
 2. `join` + `contribute` akışı signed mesaj ve public record linki üretir.
-3. `proof-kit` çıktısı `public-proof.json`, README snippet’i ve X taslağını
-   birlikte verir; proof offline doğrulanabilir.
+3. `proof-kit` çıktısı public proof ve README snippet’ini birlikte verir; proof
+   offline doğrulanabilir.
 
 ## Gerekenler
 
@@ -132,8 +132,6 @@ node flop.js export \
 
 - `public-proof.json`: private key içermeyen public proof.
 - `README-proof.md`: repo README’sine eklenebilecek kısa kanıt bölümü.
-- `x-post.txt`: export sırasında yerelde üretilen paylaşım taslağı; public repoya
-  commit edilmemelidir.
 
 Proof’u internetsiz doğrulamak mümkündür:
 
