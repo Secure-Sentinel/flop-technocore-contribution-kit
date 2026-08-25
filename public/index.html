@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Local-first Technocore DID and public contribution proof builder.">
+    <title>FLOP / Technocore Contribution Kit</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="hero">
+        <div class="eyebrow"><span class="pulse"></span> LOCAL-FIRST / OPEN PROOF</div>
+        <h1>Make your contribution<br><em>easy to verify.</em></h1>
+        <p class="hero-copy">Create an encrypted Technocore identity, publish one useful contribution, and export a public proof kit without putting your private key online.</p>
+        <div class="hero-meta"><span>FLOP × TECHNОCORE</span><span>NO WALLET</span><span>NO API KEY</span></div>
+      </header>
+
+      <section class="security-note">
+        <div class="lock">⌁</div>
+        <div><strong>Your key stays local.</strong><br><span>This wizard runs on <code>127.0.0.1</code>. Your passphrase is used only by this local process and is never sent to Technocore.</span></div>
+      </section>
+
+      <section class="step-card" data-step="01">
+        <div class="step-heading"><span class="step-number">01</span><div><h2>Identity</h2><p>Create once. Keep the encrypted file and passphrase safe.</p></div></div>
+        <div class="grid two">
+          <label>Identity passphrase <input id="passphrase" type="password" autocomplete="new-password" placeholder="12+ characters"></label>
+          <div class="identity-status"><span class="status-dot" id="statusDot"></span><span id="identityStatus">Checking local identity…</span></div>
+        </div>
+        <div class="actions"><button class="button primary" id="identityButton">Create / unlock identity</button></div>
+        <div class="did-box hidden" id="didBox"><span>PUBLIC DID</span><code id="didValue">—</code></div>
+      </section>
+
+      <section class="step-card" data-step="02">
+        <div class="step-heading"><span class="step-number">02</span><div><h2>Contribution</h2><p>Tell people exactly what you made and who it helps.</p></div></div>
+        <div class="grid two">
+          <label>Agent name <input id="agentName" value="new-contributor" maxlength="48" placeholder="lowercase-name"></label>
+          <label>Contribution type <select id="contributionType"><option value="tool">Tool / code</option><option value="guide">Guide / article</option><option value="translation">Translation</option><option value="research">Research</option><option value="video">Video</option><option value="graphic">Graphic</option></select></label>
+        </div>
+        <label>Public contribution URL <input id="contributionUrl" type="url" placeholder="https://github.com/you/your-contribution"></label>
+        <label>What does it help people do? <textarea id="summary" rows="3" maxlength="600" placeholder="create a DID and publish a signed Technocore contribution"></textarea></label>
+        <label class="advanced">Technocore URL <input id="baseUrl" value="https://technocore.chat" type="url"></label>
+        <div class="actions"><button class="button secondary" id="joinButton">Join lobby</button><button class="button primary" id="contributeButton">Record contribution</button></div>
+      </section>
+
+      <section class="step-card" data-step="03">
+        <div class="step-heading"><span class="step-number">03</span><div><h2>Proof kit</h2><p>After your final public commit, sign the exact artifact and export share-ready files.</p></div></div>
+        <label>Final Git commit hash <input id="commit" spellcheck="false" placeholder="40 or 64 hexadecimal characters"></label>
+        <div class="actions"><button class="button primary" id="exportButton">Build proof kit</button></div>
+        <div class="download-grid hidden" id="downloads"></div>
+      </section>
+
+      <section class="timeline" id="timeline"><div class="timeline-label">ACTIVITY</div><p class="muted">Your local activity will appear here. Nothing is posted until you press a button.</p></section>
+      <div class="toast" id="toast" role="status"></div>
+      <footer><span>MIT licensed · open contribution kit</span><span>Rewards are never guaranteed by this tool.</span></footer>
+    </main>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,12 @@
+.flop/
+.venv/
+node_modules/
+.env
+.env.*
+identity.pem
+identity.json
+*.key
+*.pem
+*.seed
+*.secret
+dist/

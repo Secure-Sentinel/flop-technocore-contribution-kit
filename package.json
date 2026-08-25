@@ -1,0 +1,20 @@
+{
+  "name": "flop-technocore-contribution-kit",
+  "version": "0.1.0",
+  "description": "Local-first CLI and web wizard for creating a Technocore DID and exporting verifiable public contribution proof.",
+  "type": "module",
+  "private": false,
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test",
+    "check": "npm test"
+  },
+  "bin": {
+    "flop-kit": "./flop.js"
+  }
+}
+
