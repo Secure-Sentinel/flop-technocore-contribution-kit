@@ -10,3 +10,4 @@ identity.json
 *.seed
 *.secret
 dist/
+proof-kit/x-post.txt

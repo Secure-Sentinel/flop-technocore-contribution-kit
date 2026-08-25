@@ -132,8 +132,8 @@ node flop.js export \
 
 - `public-proof.json`: private key içermeyen public proof.
 - `README-proof.md`: repo README’sine eklenebilecek kısa kanıt bölümü.
-- `x-post.txt`: contribution, DID, Technocore record ve commit’i içeren paylaşım taslağı.
-- [`docs/x-thread.md`](docs/x-thread.md): bu kitin nasıl çalıştığını anlatan hazır X thread’i.
+- `x-post.txt`: export sırasında yerelde üretilen paylaşım taslağı; public repoya
+  commit edilmemelidir.
 
 Proof’u internetsiz doğrulamak mümkündür:
 
