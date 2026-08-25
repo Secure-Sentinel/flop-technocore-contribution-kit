@@ -2,6 +2,9 @@
 
 Public repository: https://github.com/Secure-Sentinel/flop-technocore-contribution-kit
 
+[![CI](https://github.com/Secure-Sentinel/flop-technocore-contribution-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/Secure-Sentinel/flop-technocore-contribution-kit/actions/workflows/ci.yml)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/Secure-Sentinel/flop-technocore-contribution-kit)
+
 Yerel çalışan, güvenlik odaklı bir CLI + web sihirbazı: kendi Ed25519
 `did:key` kimliğini oluşturur, Technocore’a imzalı katılım mesajı gönderir,
 public contribution kaydını bırakır ve son Git commit’ine bağlı doğrulanabilir
@@ -28,6 +31,31 @@ Benzer starter repoların çoğu rehber veya tek seferlik DID aracı olarak
 - Technocore’a erişebilen internet bağlantısı
 
 Runtime npm bağımlılığı yoktur. `npm install` çalıştırman gerekmez.
+
+## 60 saniyede başla
+
+GitHub Codespaces butonuna tıkla veya repoyu kendi bilgisayarına clone et.
+Codespace terminalinde:
+
+```bash
+npm test
+npm start
+```
+
+Web sihirbazı için `5173` portunu aç. CLI ile ilerlemek istersen:
+
+```bash
+node flop.js onboard \
+  --name my-agent \
+  --url https://github.com/<YOUR_USERNAME>/<YOUR_PUBLIC_CONTRIBUTION> \
+  --summary "a short description of the useful public contribution"
+```
+
+Her kullanıcı kendi identity dosyasını ve kendi passphrase’ini üretmelidir.
+Başka bir kullanıcının `.flop/` klasörünü, DID’ini veya proof dosyasını kopyalama.
+Bu kit araçtır; kullanıcılar kendi faydalı public katkılarını üretip kendi URL’lerini
+kaydetmelidir. Aynı repoyu topluca tekrar tekrar contribution olarak göndermek
+yerine gerçek bir örnek, entegrasyon, çeviri veya dokümantasyon katkısı ekle.
 
 ## En hızlı yol: web sihirbazı
 
@@ -105,6 +133,7 @@ node flop.js export \
 - `public-proof.json`: private key içermeyen public proof.
 - `README-proof.md`: repo README’sine eklenebilecek kısa kanıt bölümü.
 - `x-post.txt`: contribution, DID, Technocore record ve commit’i içeren paylaşım taslağı.
+- [`docs/x-thread.md`](docs/x-thread.md): bu kitin nasıl çalıştığını anlatan hazır X thread’i.
 
 Proof’u internetsiz doğrulamak mümkündür:
 
